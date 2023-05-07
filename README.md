@@ -1,1 +1,1 @@
-# My-first-Qt-project
+# First-Qt-project
