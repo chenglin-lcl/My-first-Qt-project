@@ -1,0 +1,30 @@
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
+
+#include <QMainWindow>
+#include "ui_mainwindow.h"
+
+QT_BEGIN_NAMESPACE
+namespace Ui { class MainWindow; } // 这个在ui_mainwindow.h已经实现了
+QT_END_NAMESPACE
+
+class MainWindow : public QMainWindow // 这个MainWindow与Ui::MainWindow不一样
+{
+    Q_OBJECT
+
+public:
+    MainWindow(QWidget *parent = nullptr);
+    ~MainWindow();
+
+private:
+    Ui::MainWindow *ui;
+
+public slots:
+    void printInfo();
+private slots:
+    void on_pushButton_2_clicked();
+
+signals:
+    void send_msg();
+};
+#endif // MAINWINDOW_H
